@@ -7,6 +7,15 @@ and write them into a pipe.
 The consumers read the items from the pipe
 and print their content.
 
+This program utilizes semaphores for synchronization and
+may take advantage of the POSIX guarantee that a (small)
+specified number of bytes can be written atomically to a
+pipe (see pipe(7)).
+
+This is my solution of an assignment in the course
+[CS511](https://web.stevens.edu/compsci/graduate/masters/courses/viewer.php?course=CS511&type=syl) (Concurrent Programming) at Stevens Institute of
+Technology in the Fall of 2012.
+
 # Installation
 
 The program can be compiled by running `make` inside the folder
@@ -26,4 +35,8 @@ where
 * `maxinpipe` denotes the maximum number of items which are in a
   pipe at a time.
   If this parameter is unspecified, `4` will be used by default.
+
+# Copyright
+
+(Copyright) 2012 Fabian Foerg
 
